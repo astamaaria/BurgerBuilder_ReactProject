@@ -5,11 +5,15 @@ import NavigationItems from '../../Navigation/NavigationItems/NavigationItems'
 
 const toolbar = (props) =>(
     < header className={classes.Toolbar}>
-        <div>Menu</div>
+        <div onClick={props.clicked} className={classes.DrawerToggle}>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <div className={classes.Logo}>
             <Logo/>
         </div>
-        <nav>
+        <nav className={classes.DeskTopOnly}>
             <NavigationItems/>
         </nav>
     </header>    
